@@ -1,0 +1,103 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Página de ejemplo para la clase de HTML - Aprendiendo estructura semántica y buenas prácticas"
+    />
+    <title>Mi Primera Página HTML - The Bridge</title>
+    <!-- Favicon: Reemplaza con la URL de tu favicon desde Cloudinary -->
+    <link
+      rel="icon"
+      href="https://res.cloudinary.com/tu-cloud/image/upload/v1/favicon.ico"
+      type="image/x-icon"
+    />
+  </head>
+  <body>
+    <!-- SECCIÓN 1: HEADER -->
+    <!-- El header contiene elementos introductorios o de navegación -->
+    <header>
+      <h1>Bienvenidos a mi Sitio Web</h1>
+      <p>Aprendiendo HTML con The Bridge</p>
+
+      <!-- NAV: Menú de navegación -->
+      <nav>
+        <ul>
+          <li><a href="index.html">Inicio</a></li>
+          <li><a href="#sobre-mi">Sobre Mí</a></li>
+          <li><a href="#proyectos">Proyectos</a></li>
+          <li><a href="contacto.html">Contacto</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <!-- MAIN: Contenido principal de la página -->
+    <main>
+      <!-- SECTION: Agrupación temática de contenido -->
+      <section id="sobre-mi">
+        <h2>Sobre Mí</h2>
+        <p>
+          Esta es una sección de ejemplo que agrupa contenido relacionado sobre
+          mí.
+        </p>
+
+        <!-- IMG: Etiqueta de imagen con atributo alt obligatorio -->
+        <!-- TODO: Reemplaza con la URL de tu imagen desde Cloudinary -->
+        <img
+          src="https://res.cloudinary.com/tu-cloud/image/upload/v1/perfil.jpg"
+          alt="Fotografía de perfil mostrando a una persona sonriendo"
+        />
+      </section>
+
+      <!-- SECTION con ARTICLEs: Contenido autocontenido -->
+      <section id="proyectos">
+        <h2>Mis Proyectos</h2>
+
+        <!-- ARTICLE: Contenido independiente que tiene sentido por sí mismo -->
+        <article>
+          <h3>Proyecto 1: Portfolio Personal</h3>
+          <p>
+            Descripción del primer proyecto. Un artículo puede existir
+            independientemente del resto de la página.
+          </p>
+          <!-- TODO: Reemplaza con la URL de tu imagen desde Cloudinary -->
+          <img
+            src="https://res.cloudinary.com/tu-cloud/image/upload/v1/proyecto1.jpg"
+            alt="Captura de pantalla del proyecto portfolio mostrando diseño responsive"
+          />
+        </article>
+
+        <article>
+          <h3>Proyecto 2: Aplicación Web</h3>
+          <p>Descripción del segundo proyecto con contenido autocontenido.</p>
+          <!-- TODO: Reemplaza con la URL de tu imagen desde Cloudinary -->
+          <img
+            src="https://res.cloudinary.com/tu-cloud/image/upload/v1/proyecto2.jpg"
+            alt="Interfaz de la aplicación web mostrando el dashboard principal"
+          />
+        </article>
+      </section>
+
+      <!-- Otra SECTION para diferenciar contenido -->
+      <section>
+        <h2>Habilidades</h2>
+        <ul>
+          <li>HTML5</li>
+          <li>CSS3</li>
+          <li>JavaScript</li>
+        </ul>
+      </section>
+    </main>
+
+    <!-- FOOTER: Pie de página con información complementaria -->
+    <footer>
+      <p>&copy; 2026 Mi Sitio Web - The Bridge</p>
+      <p>
+        Contacto:
+        <a href="mailto:ejemplo@thebridge.com">ejemplo@thebridge.com</a>
+      </p>
+    </footer>
+  </body>
+</html>

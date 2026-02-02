@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Portafolio de proyectos - Clase 02 HTML, CSS y JavaScript">
+  <title>Mi Portafolio - The Bridge</title>
+
+  <!-- Reseteo CSS -->
+  <link rel="stylesheet" href="css/reset.css">
+
+  <!-- Hoja de estilos -->
+  <link rel="stylesheet" href="css/styles.css">
+
+  <!-- Favicon -->
+  <link rel="icon" href="https://res.cloudinary.com/dataimages/image/upload/v1768570952/Data-CV/datalogo_fffq2x.png"
+    type="image/x-icon">
+</head>
+
+<body>
+
+  <!-- HEADER: Cabecera con position fixed -->
+  <header class="header">
+    <div class="container header-content">
+      <!-- Logo/Imagen -->
+      <div class="logo">
+        <img src="https://res.cloudinary.com/dataimages/image/upload/v1768570952/Data-CV/datalogo_fffq2x.png"
+          alt="Logo de Mi Portafolio">
+      </div>
+
+      <!-- Menú de navegación -->
+      <nav class="nav">
+        <ul class="nav-list">
+          <li><a href="#inicio">Inicio</a></li>
+          <li><a href="#proyectos">Proyectos</a></li>
+          <li><a href="#sobre-mi">Sobre Mí</a></li>
+          <li><a href="#contacto">Contacto</a></li>
+        </ul>
+      </nav>
+
+      <!-- Botón hamburguesa (visible solo en móvil) -->
+      <button class="hamburger" id="hamburger" aria-label="Menú de navegación">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- MAIN: Contenido principal -->
+  <main class="main">
+    <div class="container">
+
+      <!-- Sección Hero -->
+      <section id="inicio" class="hero">
+        <h1>Bienvenido a Mi Portafolio</h1>
+        <p class="hero-subtitle">Desarrollador Full Stack en formación</p>
+      </section>
+
+      <!-- Sección de Proyectos con Cards -->
+      <section id="proyectos" class="proyectos">
+        <h2>Mis Proyectos</h2>
+
+        <!-- Contenedor de cards -->
+        <ul class="cards-container">
+
+          <!-- Card 1 -->
+          <li class="card">
+            <img src="https://res.cloudinary.com/dataimages/image/upload/v1701273415/samples/dessert-on-a-plate.jpg"
+              alt="Proyecto Web" class="card-image">
+            <div class="card-content">
+              <h3 class="card-title">Proyecto Web</h3>
+              <p class="card-description">Sitio web responsive con HTML, CSS y JavaScript</p>
+              <button class="card-button">Ver Proyecto</button>
+            </div>
+          </li>
+
+          <!-- Card 2 -->
+          <li class="card">
+            <img src="https://res.cloudinary.com/dataimages/image/upload/v1701273414/samples/chair-and-coffee-table.jpg"
+              alt="App de Tareas" class="card-image">
+            <div class="card-content">
+              <h3 class="card-title">App de Tareas</h3>
+              <p class="card-description">Aplicación para gestionar tareas diarias de forma eficiente</p>
+              <button class="card-button">Ver Proyecto</button>
+            </div>
+          </li>
+
+          <!-- Card 3 -->
+          <li class="card">
+            <img src="https://res.cloudinary.com/dataimages/image/upload/v1701273408/samples/shoe.jpg"
+              alt="Portfolio Design" class="card-image">
+            <div class="card-content">
+              <h3 class="card-title">Portfolio Design</h3>
+              <p class="card-description">Diseño moderno de portafolio con animaciones CSS</p>
+              <button class="card-button">Ver Proyecto</button>
+            </div>
+          </li>
+
+          <!-- Card 4 -->
+          <li class="card">
+            <img src="https://res.cloudinary.com/dataimages/image/upload/v1701273409/samples/breakfast.jpg"
+              alt="E-commerce" class="card-image">
+            <div class="card-content">
+              <h3 class="card-title">E-commerce</h3>
+              <p class="card-description">Tienda online con carrito de compras funcional</p>
+              <button class="card-button">Ver Proyecto</button>
+            </div>
+          </li>
+
+    </div>
+    </section>
+
+    <!-- Sección Sobre Mí -->
+    <section id="sobre-mi" class="sobre-mi">
+      <h2>Sobre Mí</h2>
+      <p>Estudiante apasionado por el desarrollo web, aprendiendo HTML, CSS y JavaScript en The Bridge.</p>
+    </section>
+
+    </div>
+  </main>
+
+  <!-- FOOTER: Pie de página -->
+  <footer class="footer">
+    <div class="container">
+      <p>&copy; 2026 Mi Portafolio. Todos los derechos reservados.</p>
+    </div>
+  </footer>
+
+  <!-- Script de JavaScript -->
+  <script src="js/script.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,315 @@
+/* IMPORTAR GOOGLE FONTS */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap');
+
+/* VARIABLES CSS (Opcional pero recomendable) */
+:root {
+    --color-primary: #4A90E2;
+    --color-secondary: #2C3E50;
+    --color-text: #333333;
+    --color-bg: #F8F9FA;
+    --color-white: #FFFFFF;
+    --spacing-xs: 8px;
+    --spacing-sm: 16px;
+    --spacing-md: 24px;
+    --spacing-lg: 48px;
+    --header-height: 70px;
+}
+
+/* ESTILOS GENERALES */
+body {
+    font-family: 'Poppins', sans-serif;
+    color: var(--color-text);
+    background-color: var(--color-bg);
+    line-height: 1.6;
+    
+    /* Flexbox para mantener footer abajo */
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+/* Contenedor centrado con ancho máximo */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 var(--spacing-md);
+}
+
+/* HEADER */
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: var(--header-height);
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  background-color: var(--color-white);
+  z-index: 1000;
+}
+
+.header-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100%;
+}
+
+.logo img {
+    height: 40px;
+}
+
+/* NAVEGACIÓN */
+.nav-list {
+    display: flex;
+    gap: var(--spacing-md);
+}
+
+.nav-list a {
+    font-weight: 500;
+    transition: color 0.3s ease;
+    padding: var(--spacing-xs) var(--spacing-sm);
+}
+
+.nav-list a:hover {
+    color: var(--color-primary);
+}
+
+/* BOTÓN HAMBURGUESA (oculto en desktop) */
+.hamburger {
+    display: none;
+    flex-direction: column;
+    gap: 5px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: var(--spacing-xs);
+}
+
+.hamburger span {
+    width: 25px;
+    height: 3px;
+    background-color: var(--color-secondary);
+    transition: all 0.3s ease;
+}
+
+/* Animación cuando el menú está activo */
+.hamburger.active span:nth-child(1) {
+    transform: rotate(45deg) translate(5px, 5px);
+}
+
+.hamburger.active span:nth-child(2) {
+    opacity: 0;
+}
+
+.hamburger.active span:nth-child(3) {
+    transform: rotate(-45deg) translate(7px, -6px);
+}
+
+/* MAIN - Crece para empujar footer abajo */
+.main {
+    flex: 1;
+    margin-top: var(--header-height);
+    padding: var(--spacing-lg) 0;
+}
+
+/* SECCIÓN HERO */
+.hero {
+    text-align: center;
+    padding: var(--spacing-lg) 0;
+}
+
+.hero h1 {
+    font-size: 3rem;
+    font-weight: 700;
+    color: var(--color-secondary);
+    margin-bottom: var(--spacing-sm);
+}
+
+.hero-subtitle {
+    font-size: 1.25rem;
+    color: var(--color-primary);
+    font-weight: 300;
+}
+
+/* SECCIÓN PROYECTOS */
+.proyectos {
+    padding: var(--spacing-lg) 0;
+}
+
+.proyectos h2 {
+    font-size: 2.5rem;
+    text-align: center;
+    margin-bottom: var(--spacing-lg);
+    color: var(--color-secondary);
+}
+
+/* CARDS CON FLEXBOX */
+.cards-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--spacing-md);
+    justify-content: center;
+}
+
+/* Estructura de cada card */
+.card {
+  background-color: var(--color-white);
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  max-width: 280px;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Imagen de la card */
+.card-image {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+/* Contenido de la card */
+.card-content {
+    padding: var(--spacing-md);
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.card-title {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: var(--color-secondary);
+    margin-bottom: var(--spacing-xs);
+}
+
+.card-description {
+    font-size: 0.95rem;
+    color: #666;
+    margin-bottom: var(--spacing-md);
+    flex: 1;
+}
+
+/* Botón de la card */
+.card-button {
+    background-color: var(--color-primary);
+    color: var(--color-white);
+    border: none;
+    padding: 12px 24px;
+    border-radius: 5px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    align-self: flex-start;
+}
+
+.card-button:hover {
+    background-color: #357ABD;
+}
+
+/* SECCIÓN SOBRE MÍ */
+.sobre-mi {
+    padding: var(--spacing-lg) 0;
+    text-align: center;
+}
+
+.sobre-mi h2 {
+    font-size: 2.5rem;
+    margin-bottom: var(--spacing-md);
+    color: var(--color-secondary);
+}
+
+.sobre-mi p {
+    font-size: 1.1rem;
+    max-width: 700px;
+    margin: 0 auto;
+    color: #555;
+}
+
+/* FOOTER - Siempre abajo */
+.footer {
+    background-color: var(--color-secondary);
+    color: var(--color-white);
+    padding: var(--spacing-md) 0;
+    text-align: center;
+}
+
+.footer p {
+    margin: 5px 0;
+}
+
+/* RESPONSIVE - TABLET */
+@media (max-width: 768px) {
+    .hero h1 {
+        font-size: 2rem;
+    }
+    
+    .hero-subtitle {
+        font-size: 1rem;
+    }
+    
+    .proyectos h2,
+    .sobre-mi h2 {
+        font-size: 2rem;
+    }
+    
+    .card {
+        max-width: 45%;
+    }
+}
+
+/* RESPONSIVE - MÓVIL */
+@media (max-width: 576px) {
+    /* Mostrar hamburguesa, ocultar menú normal */
+    .hamburger {
+        display: flex;
+    }
+    
+    .nav {
+        position: fixed;
+        top: var(--header-height);
+        left: -100%;
+        width: 100%;
+        background-color: var(--color-white);
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        transition: left 0.3s ease;
+        padding: var(--spacing-md) 0;
+    }
+    
+    /* Cuando el menú está activo */
+    .nav.active {
+        left: 0;
+    }
+    
+    .nav-list {
+        flex-direction: column;
+        gap: 0;
+        text-align: center;
+    }
+    
+    .nav-list li {
+        border-bottom: 1px solid #eee;
+    }
+    
+    .nav-list a {
+        display: block;
+        padding: var(--spacing-sm) var(--spacing-md);
+    }
+    
+    /* Cards ocupan todo el ancho */
+    .card {
+        max-width: 100%;
+    }
+    
+    .hero h1 {
+        font-size: 1.75rem;
+    }
+}
