@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clase 04 APOYO - Ejercicios DOM</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <header>
+        <div class="header-container">
+            <h1>Ejercicios DOM</h1>
+            <button id="btn-hamburguesa" class="btn-hamburguesa">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+        <nav id="menu-navegacion" class="menu-navegacion">
+            <a href="#paso1" class="nav-link">getElementById</a>
+            <a href="#paso2" class="nav-link">querySelector</a>
+            <a href="#paso3" class="nav-link">textContent vs innerHTML</a>
+            <a href="#paso4" class="nav-link">createElement</a>
+            <a href="#paso5" class="nav-link">Bucle for</a>
+            <a href="#paso6" class="nav-link">map()</a>
+            <a href="#paso9" class="nav-link">classList</a>
+            <a href="#paso10" class="nav-link">Integrador</a>
+        </nav>
+    </header>
+
+    <main class="container">
+        
+        <!-- Paso 1: getElementById -->
+        <section id="paso1" class="ejercicio">
+            <h2>Paso 1: getElementById - Capturar elemento</h2>
+            <div id="paso1-resultado" class="resultado">Texto original</div>
+            <button id="paso1-btn" class="btn">Cambiar texto</button>
+        </section>
+
+        <!-- Paso 2: querySelector -->
+        <section id="paso2" class="ejercicio">
+            <h2>Paso 2: querySelector - Seleccionar por clase</h2>
+            <p class="paso2-texto">Párrafo con clase</p>
+            <button id="paso2-btn" class="btn">Cambiar color</button>
+        </section>
+
+        <!-- Paso 3: textContent vs innerHTML -->
+        <section id="paso3" class="ejercicio">
+            <h2>Paso 3: textContent vs innerHTML</h2>
+            <div id="paso3-text" class="resultado"></div>
+            <div id="paso3-html" class="resultado"></div>
+            <button id="paso3-btn" class="btn">Insertar contenido</button>
+        </section>
+
+        <!-- Paso 4: createElement y appendChild -->
+        <section id="paso4" class="ejercicio">
+            <h2>Paso 4: createElement - Crear elementos dinámicos</h2>
+            <div id="paso4-contenedor" class="resultado-flex"></div>
+            <button id="paso4-btn" class="btn">Crear nueva tarjeta</button>
+        </section>
+
+        <!-- Paso 5: Crear múltiples elementos con bucle -->
+        <section id="paso5" class="ejercicio">
+            <h2>Paso 5: Bucle for - Crear lista de elementos</h2>
+            <div id="paso5-contenedor" class="resultado"></div>
+            <button id="paso5-btn" class="btn">Generar lista</button>
+        </section>
+
+        <!-- Paso 6: innerHTML con array.map() -->
+        <section id="paso6" class="ejercicio">
+            <h2>Paso 6: innerHTML con map() - Array de objetos</h2>
+            <div id="paso6-contenedor" class="resultado-flex"></div>
+            <button id="paso6-btn" class="btn">Mostrar productos</button>
+        </section>
+
+        <!-- Paso 9: classList - Agregar/quitar clases -->
+        <section id="paso9" class="ejercicio">
+            <h2>Paso 7: classList - Manipular clases CSS</h2>
+            <div id="paso9-caja" class="caja">Caja con estilos</div>
+            <button id="paso9-toggle" class="btn">Toggle clase</button>
+            <button id="paso9-add" class="btn">Añadir clase</button>
+            <button id="paso9-remove" class="btn">Quitar clase</button>
+        </section>
+
+        <!-- Paso 10: Proyecto integrador -->
+        <section id="paso10" class="ejercicio">
+            <h2>Paso 8: Proyecto Integrador - Todo junto</h2>
+            <div class="controles">
+                <input type="text" id="paso10-input" placeholder="Nombre del producto" class="input">
+                <input type="number" id="paso10-precio" placeholder="Precio" class="input">
+                <button id="paso10-agregar" class="btn">Agregar producto</button>
+                <button id="paso10-limpiar" class="btn btn-danger">Limpiar todos</button>
+            </div>
+            <div id="paso10-contenedor" class="resultado-flex"></div>
+        </section>
+
+    </main>
+
+    <script src="js/data.js"></script>
+    <script src="js/script.js"></script>
+</body>
+</html>

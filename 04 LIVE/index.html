@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clase 04 - Manipulación del DOM</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <header>
+        <div class="container-header">
+            <h1>Tienda Online - Electrónica</h1>
+            <button id="btnModoOscuro" class="btn-toggle">Modo Oscuro</button>
+        </div>
+    </header>
+
+    <main class="container">
+        
+        <section class="seccion">
+            <h2>Todos los Productos</h2>
+            <div id="contenedor-productos" class="grid-productos"></div>
+        </section>
+
+        <section class="seccion">
+            <h2>Productos en Oferta</h2>
+            <div id="contenedor-ofertas" class="grid-productos"></div>
+        </section>
+
+        <section class="seccion">
+            <h2>Más Vendidos</h2>
+            <div id="contenedor-vendidos" class="grid-productos"></div>
+        </section>
+
+        <section class="seccion">
+            <h2>Filtrar Productos</h2>
+            <div class="controles">
+                <button id="btnMostrarTodos" class="btn">Todos</button>
+                <button id="btnMostrarOfertas" class="btn">Ofertas</button>
+                <button id="btnMostrarCaros" class="btn">Premium</button>
+                <button id="btnLimpiar" class="btn btn-danger">Limpiar</button>
+            </div>
+            <div id="resultado-botones" class="resultado"></div>
+        </section>
+
+    </main>
+
+    <footer>
+        <p>Manipulación del DOM</p>
+    </footer>
+
+    <script src="js/data.js"></script>
+    <script src="js/script.js"></script>
+</body>
+</html>
