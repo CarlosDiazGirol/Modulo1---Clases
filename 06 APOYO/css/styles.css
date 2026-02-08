@@ -1,0 +1,300 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    background-color: #f5f5f5;
+    color: #333;
+    line-height: 1.6;
+    min-height: 100vh;
+    padding-bottom: 3rem;
+}
+
+pre {
+  overflow-y: auto;
+}
+
+header {
+    background-color: #000;
+    color: white;
+    text-align: center;
+    padding: 2rem 1rem;
+    margin-bottom: 2rem;
+    border-bottom: 3px solid #333;
+}
+
+header h1 {
+    font-size: 2.5rem;
+    margin-bottom: 0.5rem;
+}
+
+header p {
+    font-size: 1.125rem;
+    opacity: 0.9;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1.5rem;
+}
+
+/* ============ SECTIONS ============ */
+section {
+    background-color: white;
+    border-radius: 12px;
+    padding: 2rem;
+    margin-bottom: 2rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+section h2 {
+    color: #000;
+    margin-bottom: 1.5rem;
+    font-size: 1.75rem;
+    border-bottom: 2px solid #ddd;
+    padding-bottom: 0.5rem;
+}
+
+/* ============ THEORY SECTION ============ */
+.theory-card {
+    background-color: #fafafa;
+    padding: 1.5rem;
+    border-radius: 8px;
+    border-left: 4px solid #000;
+}
+
+.theory-card ul {
+    margin-left: 1.5rem;
+    margin-top: 1rem;
+}
+
+.theory-card li {
+    margin-bottom: 0.5rem;
+}
+
+.theory-card code {
+    background-color: #fff;
+    padding: 0.2rem 0.5rem;
+    border-radius: 4px;
+    font-weight: 600;
+    color: #000;
+    border: 1px solid #ddd;
+}
+
+/* ============ INSTRUCTIONS ============ */
+.instruction {
+    background-color: #fafafa;
+    padding: 1rem;
+    border-radius: 6px;
+    margin-bottom: 1rem;
+    border-left: 3px solid #666;
+    font-weight: 500;
+}
+
+.api-info {
+    background-color: #fff;
+    padding: 0.75rem;
+    border-radius: 6px;
+    margin-bottom: 1rem;
+    border: 1px solid #ddd;
+}
+
+.api-info code {
+    background-color: #000;
+    color: #fff;
+    padding: 0.25rem 0.5rem;
+    border-radius: 4px;
+    font-size: 0.875rem;
+}
+
+/* ============ BUTTONS ============ */
+.btn {
+    padding: 0.875rem 1.5rem;
+    border: 2px solid #000;
+    border-radius: 6px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    margin-bottom: 1rem;
+    background-color: #000;
+    color: #fff;
+}
+
+.btn:hover {
+    background-color: #333;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.btn:active {
+    transform: translateY(0);
+}
+
+/* ============ LOADING ============ */
+.loading {
+    text-align: center;
+    padding: 1rem;
+    color: #666;
+    font-weight: 600;
+    background-color: #fafafa;
+    border-radius: 6px;
+    border: 1px dashed #999;
+}
+
+.hidden {
+    display: none !important;
+}
+
+/* ============ RESULT CARDS ============ */
+.result-card {
+    background-color: #fafafa;
+    padding: 1.5rem;
+    border-radius: 8px;
+    margin-top: 1rem;
+    border: 2px solid #ddd;
+}
+
+.result-card h3 {
+    color: #000;
+    margin-bottom: 0.75rem;
+}
+
+.result-card h4 {
+    color: #333;
+    margin-bottom: 0.5rem;
+}
+
+.result-card p {
+    margin-bottom: 0.5rem;
+}
+
+.result-card small {
+    color: #666;
+    font-style: italic;
+}
+
+.result-card .error {
+    color: #c00;
+    font-weight: 600;
+}
+
+/* User Card */
+.user-card {
+    display: flex;
+    gap: 1.5rem;
+    align-items: center;
+}
+
+.user-card img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    border: 3px solid #000;
+}
+
+/* ============ COMPARISON SECTION ============ */
+.comparison-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin-bottom: 2rem;
+}
+
+.comparison-grid h3 {
+    color: #000;
+    margin-bottom: 1rem;
+    font-size: 1.25rem;
+    border-bottom: 2px solid #000;
+    padding-bottom: 0.5rem;
+}
+
+.result-card img {
+    max-width: 100%;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border: 2px solid #ddd;
+}
+
+/* ============ DIFFERENCES SECTION ============ */
+.differences-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+}
+
+.diff-card {
+    background-color: #fafafa;
+    padding: 1.5rem;
+    border-radius: 8px;
+    border-top: 4px solid #000;
+}
+
+.diff-card h3 {
+    color: #000;
+    margin-bottom: 1rem;
+}
+
+.diff-card ul {
+    list-style: none;
+}
+
+.diff-card li {
+    margin-bottom: 0.75rem;
+    padding-left: 1rem;
+    border-left: 2px solid #ddd;
+}
+
+/* ============ API SECTION ============ */
+.api-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1.5rem;
+}
+
+.api-card {
+    background-color: #fafafa;
+    padding: 1.5rem;
+    border-radius: 8px;
+    border-left: 4px solid #333;
+}
+
+.api-card h4 {
+    color: #000;
+    margin-bottom: 0.5rem;
+}
+
+.api-card p {
+    margin-bottom: 0.75rem;
+    color: #666;
+}
+
+.api-card code {
+    background-color: #000;
+    color: #fff;
+    padding: 0.25rem 0.5rem;
+    border-radius: 4px;
+    font-size: 0.875rem;
+    display: inline-block;
+    word-break: break-word;
+}
+
+/* ============ RESPONSIVE ============ */
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 1.875rem;
+    }
+    
+    section {
+        padding: 1.5rem;
+    }
+    
+    .comparison-grid,
+    .comparison-code {
+        grid-template-columns: 1fr;
+    }
+}

@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio: Promesas y Asincronía</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <header>
+        <h1>Ejercicio: Promesas y Asincronía</h1>
+        <p>Comparando .then() vs async/await con APIs reales</p>
+    </header>
+
+    <main class="container">
+        <!-- Explicación Teórica -->
+        <section class="theory-section">
+            <h2>Conceptos a practicar</h2>
+            <div class="theory-card">
+                <p><strong>1. Promesas:</strong> Objeto que representa el resultado futuro de una operación asíncrona</p>
+                <p><strong>2. Estados:</strong> pending (esperando) → fulfilled (éxito) o rejected (error)</p>
+                <p><strong>3. Métodos:</strong> .then() / .catch() vs async/await + try/catch</p>
+                <p><strong>4. APIs a usar:</strong> JSONPlaceholder, Random User, Dog CEO, Advice Slip, JokeAPI</p>
+            </div>
+        </section>
+
+        <!-- EJERCICIO 1: Crear promesa básica -->
+        <section class="example-section">
+            <h2>Ejercicio 1: Crear una Promesa Básica</h2>
+            <p class="instruction">Crea una promesa que se resuelva después de 2 segundos con el mensaje "Promesa cumplida"</p>
+            <button id="btnPromesa1" class="btn">Ejecutar Promesa</button>
+            <div id="loadingPromesa1" class="loading hidden">Esperando...</div>
+            <div id="resultPromesa1" class="result-card hidden"></div>
+        </section>
+
+        <!-- EJERCICIO 2: Fetch con .then() -->
+        <section class="example-section">
+            <h2>Ejercicio 2: Fetch con .then() - JSONPlaceholder</h2>
+            <p class="instruction">Obtén un post de JSONPlaceholder usando .then() y .catch()</p>
+            <p class="api-info">API: <code>https://jsonplaceholder.typicode.com/posts/1</code></p>
+            <button id="btnThen" class="btn">Obtener Post (.then)</button>
+            <div id="loadingThen" class="loading hidden">Cargando...</div>
+            <div id="resultThen" class="result-card hidden"></div>
+        </section>
+
+        <!-- EJERCICIO 3: Fetch con async/await -->
+        <section class="example-section">
+            <h2>Ejercicio 3: Fetch con async/await - Random User</h2>
+            <p class="instruction">Obtén un usuario aleatorio usando async/await y try/catch</p>
+            <p class="api-info">API: <code>https://randomuser.me/api/</code></p>
+            <button id="btnAsync" class="btn">Obtener Usuario (async)</button>
+            <div id="loadingAsync" class="loading hidden">Cargando...</div>
+            <div id="resultAsync" class="result-card hidden"></div>
+        </section>
+
+        <!-- EJERCICIO 4: Comparación directa -->
+        <section class="example-section">
+            <h2>Ejercicio 4: Comparación - Dog CEO API</h2>
+            <p class="instruction">Implementa la misma funcionalidad con ambos métodos</p>
+            <p class="api-info">API: <code>https://dog.ceo/api/breeds/image/random</code></p>
+            <div class="comparison-grid">
+                <div>
+                    <h3>Con .then()</h3>
+                    <button id="btnDogThen" class="btn">🐕 Perro (.then)</button>
+                    <div id="loadingDogThen" class="loading hidden">Cargando...</div>
+                    <div id="resultDogThen" class="result-card hidden"></div>
+                </div>
+                <div>
+                    <h3>Con async/await</h3>
+                    <button id="btnDogAsync" class="btn">🐕 Perro (async)</button>
+                    <div id="loadingDogAsync" class="loading hidden">Cargando...</div>
+                    <div id="resultDogAsync" class="result-card hidden"></div>
+                </div>
+            </div>
+        </section>
+
+        <!-- EJERCICIO 5: Advice Slip -->
+        <section class="example-section">
+            <h2>Ejercicio 5: Consejos Aleatorios - Advice Slip</h2>
+            <p class="instruction">Obtén un consejo aleatorio en inglés usando async/await</p>
+            <p class="api-info">API: <code>https://api.adviceslip.com/advice</code></p>
+            <button id="btnAdvice" class="btn">Obtener Consejo</button>
+            <div id="loadingAdvice" class="loading hidden">Cargando...</div>
+            <div id="resultAdvice" class="result-card hidden"></div>
+        </section>
+
+        <!-- EJERCICIO 6: Chiste Aleatorio -->
+        <section class="example-section">
+            <h2>Ejercicio 6: Chiste Aleatorio - JokeAPI</h2>
+            <p class="instruction">Obtén un chiste usando .then() (tipo Programming, sin banderas ofensivas)</p>
+            <p class="api-info">API: <code>https://v2.jokeapi.dev/joke/Programming?type=single</code></p>
+            <button id="btnJoke" class="btn">Obtener Chiste</button>
+            <div id="loadingJoke" class="loading hidden">Cargando...</div>
+            <div id="resultJoke" class="result-card hidden"></div>
+        </section>
+
+        <!-- EJERCICIO 7: Múltiples promesas -->
+        <section class="example-section">
+            <h2>Ejercicio 7: Múltiples Promesas Secuenciales</h2>
+            <p class="instruction">Obtén un usuario Y luego un post (una después de otra)</p>
+            <button id="btnSecuencial" class="btn">Ejecutar Secuencial</button>
+            <div id="loadingSecuencial" class="loading hidden">Cargando...</div>
+            <div id="resultSecuencial" class="result-card hidden"></div>
+        </section>
+
+        <!-- EJERCICIO 8: Promise.all -->
+        <section class="example-section">
+            <h2>Ejercicio 8: Múltiples Promesas en Paralelo</h2>
+            <p class="instruction">Obtén un post Y un usuario AL MISMO TIEMPO usando Promise.all()</p>
+            <button id="btnParalelo" class="btn">Ejecutar Paralelo</button>
+            <div id="loadingParalelo" class="loading hidden">Cargando...</div>
+            <div id="resultParalelo" class="result-card hidden"></div>
+        </section>
+
+        <!-- EJERCICIO 9: Manejo de errores -->
+        <section class="example-section">
+            <h2>Ejercicio 9: Manejo de Errores</h2>
+            <p class="instruction">Intenta obtener un recurso que NO existe y maneja el error (404)</p>
+            <p class="api-info">API: <code>https://jsonplaceholder.typicode.com/posts/999999</code></p>
+            <button id="btnError" class="btn">Provocar Error</button>
+            <div id="loadingError" class="loading hidden">Cargando...</div>
+            <div id="resultError" class="result-card hidden"></div>
+        </section>
+
+        <!-- EJERCICIO 10: Promise.race -->
+        <section class="example-section">
+            <h2>Ejercicio 10: Promise.race() - La más rápida gana</h2>
+            <p class="instruction">Lanza 3 peticiones y muestra solo la que termine primero</p>
+            <button id="btnRace" class="btn">Ejecutar Race</button>
+            <div id="loadingRace" class="loading hidden">Cargando...</div>
+            <div id="resultRace" class="result-card hidden"></div>
+        </section>
+
+        <!-- Guía Rápida -->
+        <section class="differences-section">
+            <h2>Guía Rápida de Sintaxis</h2>
+            <div class="differences-grid">
+                <div class="diff-card">
+                    <h3>.then() / .catch()</h3>
+                    <ul>
+                        <li>Encadenar con .then()</li>
+                        <li>Errores con .catch()</li>
+                        <li>return para pasar datos</li>
+                        <li>Sintaxis tradicional (ES2015)</li>
+                    </ul>
+                </div>
+                <div class="diff-card">
+                    <h3>async / await</h3>
+                    <ul>
+                        <li>Función debe ser async</li>
+                        <li>await espera la promesa</li>
+                        <li>try/catch para errores</li>
+                        <li>Sintaxis moderna (ES2017)</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- APIs Usadas -->
+        <section class="api-section">
+            <h2>🌐 APIs Gratuitas (sin API key)</h2>
+            <div class="api-grid">
+                <div class="api-card">
+                    <h4>JSONPlaceholder</h4>
+                    <p>Posts, users, comments</p>
+                    <code>jsonplaceholder.typicode.com</code>
+                </div>
+                <div class="api-card">
+                    <h4>Random User</h4>
+                    <p>Usuarios aleatorios</p>
+                    <code>randomuser.me</code>
+                </div>
+                <div class="api-card">
+                    <h4>Dog CEO</h4>
+                    <p>Imágenes de perros</p>
+                    <code>dog.ceo</code>
+                </div>
+                <div class="api-card">
+                    <h4>Advice Slip</h4>
+                    <p>Consejos aleatorios</p>
+                    <code>api.adviceslip.com</code>
+                </div>
+                <div class="api-card">
+                    <h4>JokeAPI</h4>
+                    <p>Chistes de programación</p>
+                    <code>v2.jokeapi.dev</code>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
