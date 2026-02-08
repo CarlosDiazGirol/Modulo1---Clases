@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Productos - TechStore</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <!-- HEADER PRINCIPAL -->
+    <header class="header-principal">
+        <div class="container">
+            <div class="header-content">
+                <h1>TechStore</h1>
+                <nav>
+                    <a href="index.html">Inicio</a>
+                    <a href="productos.html" class="active">Productos</a>
+                </nav>
+                <button id="btnModoOscuro" class="btn-modo">
+                    <span class="icono-sol">☀️</span>
+                    <span class="icono-luna">🌙</span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- SUBMENÚ STICKY CON ANCLAS -->
+    <nav class="submenu-sticky">
+        <div class="container">
+            <div class="submenu-content">
+                <a href="#portatiles">Portátiles</a>
+                <a href="#accesorios">Accesorios</a>
+                <a href="#monitores">Monitores</a>
+                <a href="#info">Más info</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- HERO SECTION -->
+    <section class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <h2>Catálogo de Productos</h2>
+                <p>Encuentra la tecnología perfecta para ti</p>
+        </div>
+    </section>
+
+    <!-- PRODUCTOS SECTION -->
+    <main class="container">
+        <!-- PORTÁTILES -->
+        <section id="portatiles" class="productos-section">
+            <div class="section-header-productos">
+                <h3>💻 Portátiles</h3>
+                <p>Potencia y portabilidad para tu día a día</p>
+            </div>
+            <div id="portatiles-container" class="productos-flex"></div>
+        </section>
+
+        <!-- ACCESORIOS -->
+        <section id="accesorios" class="productos-section">
+            <div class="section-header-productos">
+                <h3>🖱️ Accesorios</h3>
+                <p>Complementa tu setup con los mejores accesorios</p>
+            </div>
+            <div id="accesorios-container" class="productos-flex"></div>
+        </section>
+
+        <!-- MONITORES -->
+        <section id="monitores" class="productos-section">
+            <div class="section-header-productos">
+                <h3>🖥️ Monitores</h3>
+                <p>Pantallas de alta calidad para tu trabajo y entretenimiento</p>
+            </div>
+            <div id="monitores-container" class="productos-flex"></div>
+        </section>
+
+        <!-- AUDIO -->
+        <section id="info" class="productos-section">
+            <div class="section-header-productos">
+        <section class="beneficios-section">
+            <div class="section-header">
+                <h3>¿Por qué comprar en TechStore?</h3>
+                <div class="section-line"></div>
+            </div>
+            <div class="caracteristicas">
+                <div class="caracteristica-card">
+                    <div class="caracteristica-icon-large">✓</div>
+                    <h4>Calidad garantizada</h4>
+                    <p>Todos nuestros productos pasan rigurosos controles de calidad antes de llegar a tus manos.</p>
+                </div>
+                <div class="caracteristica-card">
+                    <div class="caracteristica-icon-large">🚀</div>
+                    <h4>Envío rápido</h4>
+                    <p>Recibe tus pedidos en 24-48 horas en toda la península. Envíos express disponibles.</p>
+                </div>
+                <div class="caracteristica-card">
+                    <div class="caracteristica-icon-large">💬</div>
+                    <h4>Soporte técnico</h4>
+                    <p>Nuestro equipo está disponible 24/7 para resolver cualquier duda o incidencia.</p>
+                </div>
+            </div>
+        </section>
+        <section class="info-section">
+            <h3>Garantía y devoluciones</h3>
+            <p>Todos los productos incluyen garantía de 2 años. Si no estás satisfecho, tienes 30 días para devolverlo sin coste adicional.</p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; TechStore - Ejercicio Sticky & Modo Oscuro</p>
+        </div>
+    </footer>
+
+    <script src="js/data.js"></script>
+    <script src="js/script.js"></script>
+</body>
+</html>
