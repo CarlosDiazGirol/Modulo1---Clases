@@ -1,78 +1,85 @@
-/* ========================================
-   DATALAYER - Productos
-   ======================================== */
+// EJERCICIO: LocalStorage + Spread Operator + Destructuring
+// DataLayer - Productos iniciales de la tienda
 
-const productos = [
+const productosIniciales = [
     {
         id: 1,
-        nombre: "Laptop ProBook 15",
-        precio: 899.99,
+        nombre: "Laptop Gaming MSI",
+        precio: 1299,
+        precioOriginal: 1599,
         categoria: "Portátiles",
-        descripcion: "Potente portátil con procesador Intel i7, 16GB RAM y SSD 512GB",
-        stock: 15
+        stock: 8,
+        enOferta: true,
+        descripcion: "Laptop potente para gaming"
     },
     {
         id: 2,
-        nombre: "Mouse Inalámbrico Pro",
-        precio: 29.99,
-        categoria: "Accesorios",
-        descripcion: "Ratón ergonómico con precisión de 4000 DPI y batería de larga duración",
-        stock: 45
+        nombre: "iPhone 15 Pro",
+        precio: 999,
+        precioOriginal: 1199,
+        categoria: "Smartphones",
+        stock: 15,
+        enOferta: true,
+        descripcion: "El último modelo de Apple"
     },
     {
         id: 3,
-        nombre: "Teclado Mecánico RGB",
-        precio: 89.99,
+        nombre: "Mouse Logitech MX Master",
+        precio: 89,
+        precioOriginal: null,
         categoria: "Accesorios",
-        descripcion: "Teclado mecánico con switches Blue, retroiluminación RGB personalizable",
-        stock: 28
+        stock: 25,
+        enOferta: false,
+        descripcion: "Mouse ergonómico profesional"
     },
     {
         id: 4,
-        nombre: "Monitor 27\" 4K",
-        precio: 399.99,
+        nombre: 'Monitor Samsung 32" 4K',
+        precio: 449,
+        precioOriginal: 599,
         categoria: "Monitores",
-        descripcion: "Pantalla 4K UHD con tecnología IPS, 60Hz y HDR",
-        stock: 12
+        stock: 12,
+        enOferta: true,
+        descripcion: "Pantalla 4K de alta calidad"
     },
     {
         id: 5,
-        nombre: "Webcam HD Pro",
-        precio: 79.99,
+        nombre: "Teclado Mecánico Corsair",
+        precio: 159,
+        precioOriginal: null,
         categoria: "Accesorios",
-        descripcion: "Cámara web Full HD 1080p con micrófono incorporado y autofocus",
-        stock: 33
+        stock: 18,
+        enOferta: false,
+        descripcion: "Teclado mecánico RGB"
     },
     {
         id: 6,
-        nombre: "Auriculares Bluetooth",
-        precio: 149.99,
+        nombre: "AirPods Pro 2",
+        precio: 199,
+        precioOriginal: 249,
         categoria: "Audio",
-        descripcion: "Cascos inalámbricos con cancelación de ruido activa y 30h de batería",
-        stock: 20
+        stock: 30,
+        enOferta: true,
+        descripcion: "Auriculares con cancelación de ruido"
     },
     {
         id: 7,
-        nombre: "SSD Externo 1TB",
-        precio: 119.99,
-        categoria: "Almacenamiento",
-        descripcion: "Disco SSD portátil USB 3.2, velocidad de lectura hasta 1050MB/s",
-        stock: 18
+        nombre: "PlayStation 5",
+        precio: 549,
+        precioOriginal: null,
+        categoria: "Consolas",
+        stock: 5,
+        enOferta: false,
+        descripcion: "Consola de última generación"
     },
     {
         id: 8,
-        nombre: "Hub USB-C 7 en 1",
-        precio: 49.99,
+        nombre: "Webcam Logitech 4K",
+        precio: 129,
+        precioOriginal: 179,
         categoria: "Accesorios",
-        descripcion: "Adaptador multipuerto con HDMI, USB 3.0, lector SD y carga rápida",
-        stock: 40
-    },
-    {
-        id: 9,
-        nombre: "Tablet 10.5\" WiFi",
-        precio: 329.99,
-        categoria: "Tablets",
-        descripcion: "Tablet con pantalla AMOLED, 128GB de almacenamiento y stylus incluido",
-        stock: 22
+        stock: 22,
+        enOferta: true,
+        descripcion: "Webcam profesional 4K"
     }
 ];

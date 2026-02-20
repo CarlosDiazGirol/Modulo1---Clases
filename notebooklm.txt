@@ -1,0 +1,7 @@
+En este vídeo vamos a aprender NotebookLM desde cero: crear un notebook, añadir fuentes, usar el chat y generar recursos como infografías, audio y mucho más.
+
+Y te preguntarás: ¿qué es NotebookLM?
+
+NotebookLM es la herramienta de IA de Google pensada para investigar y aprender a partir de tus propios materiales: PDFs, documentos, enlaces, apuntes, etc.
+La clave es que no trabaja “a ciegas” buscando por internet, sino que responde basándose en las fuentes que tú le añadas y en el contexto que le marques desde el inicio. Así consigues respuestas más controladas, fáciles de comprobar y con menos riesgo de las típicas “alucinaciones”.
+Con esto claro, vamos a crear nuestro primer cuaderno.
