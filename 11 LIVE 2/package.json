@@ -1,0 +1,16 @@
+{
+  "name": "clase-11-live-2-jest",
+  "version": "1.0.0",
+  "description": "Tests unitarios con Jest para lógica de reviews y wishlist",
+  "type": "module",
+  "scripts": {
+    "test": "node --experimental-vm-modules node_modules/.bin/jest"
+  },
+  "jest": {
+    "testEnvironment": "node",
+    "transform": {}
+  },
+  "devDependencies": {
+    "jest": "^29.7.0"
+  }
+}
