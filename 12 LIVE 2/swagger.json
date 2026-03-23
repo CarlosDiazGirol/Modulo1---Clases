@@ -1,0 +1,148 @@
+{
+  "openapi": "3.0.0",
+  "info": {
+    "title": "Ecommerce API",
+    "version": "1.0.0",
+    "description": "API de e-commerce con carrito de compra, reviews y wishlist"
+  },
+  "servers": [
+    {
+      "url": "http://localhost:3000",
+      "description": "Servidor local"
+    }
+  ],
+  "components": {
+    "securitySchemes": {
+      "bearerAuth": {
+        "type": "http",
+        "scheme": "bearer",
+        "bearerFormat": "JWT",
+        "description": "Token JWT obtenido en POST /login. Formato: Bearer <token>"
+      }
+    },
+    "schemas": {
+      "CartItem": {
+        "type": "object",
+        "properties": {
+          "id":        { "type": "string" },
+          "cartId":    { "type": "string" },
+          "productId": { "type": "string" },
+          "quantity":  { "type": "integer" }
+        }
+      },
+      "Cart": {
+        "type": "object",
+        "properties": {
+          "id":        { "type": "string" },
+          "userId":    { "type": "string" },
+          "status":    { "type": "string", "enum": ["ACTIVE", "CHECKED_OUT"] },
+          "createdAt": { "type": "string", "format": "date-time" },
+          "items":     { "type": "array", "items": { "$ref": "#/components/schemas/CartItem" } }
+        }
+      },
+      "Order": {
+        "type": "object",
+        "properties": {
+          "id":        { "type": "string" },
+          "userId":    { "type": "string" },
+          "total":     { "type": "number" },
+          "createdAt": { "type": "string", "format": "date-time" }
+        }
+      }
+    }
+  },
+  "paths": {
+    "/api/cart": {
+      "get": {
+        "tags": ["Cart"],
+        "summary": "Obtener carrito activo",
+        "description": "Devuelve el carrito activo del usuario autenticado. Si no existe, lo crea automáticamente.",
+        "security": [{ "bearerAuth": [] }],
+        "responses": {
+          "200": {
+            "description": "Carrito devuelto correctamente",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "ok":   { "type": "boolean", "example": true },
+                    "data": { "$ref": "#/components/schemas/Cart" }
+                  }
+                }
+              }
+            }
+          },
+          "401": { "description": "Token no proporcionado o inválido" }
+        }
+      }
+    },
+    "/api/cart/items": {
+      "post": {
+        "tags": ["Cart"],
+        "summary": "Añadir producto al carrito",
+        "description": "Añade un producto al carrito activo. Si el producto ya existe, suma la cantidad.",
+        "security": [{ "bearerAuth": [] }],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "required": ["productId", "quantity"],
+                "properties": {
+                  "productId": { "type": "string", "example": "uuid-del-producto" },
+                  "quantity":  { "type": "integer", "minimum": 1, "example": 2 }
+                }
+              }
+            }
+          }
+        },
+        "responses": {
+          "201": {
+            "description": "Producto añadido al carrito",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "ok":   { "type": "boolean", "example": true },
+                    "data": { "$ref": "#/components/schemas/CartItem" }
+                  }
+                }
+              }
+            }
+          },
+          "400": { "description": "productId o quantity ausentes" },
+          "401": { "description": "No autenticado" }
+        }
+      }
+    },
+    "/api/cart/checkout": {
+      "post": {
+        "tags": ["Cart"],
+        "summary": "Realizar checkout",
+        "description": "Crea un pedido con los productos del carrito y cambia el estado del carrito a CHECKED_OUT. El total se calcula a 10€ por unidad (simplificado).",
+        "security": [{ "bearerAuth": [] }],
+        "responses": {
+          "200": {
+            "description": "Pedido creado. Carrito cerrado.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "ok":   { "type": "boolean", "example": true },
+                    "data": { "$ref": "#/components/schemas/Order" }
+                  }
+                }
+              }
+            }
+          },
+          "400": { "description": "Carrito vacío o no encontrado" },
+          "401": { "description": "No autenticado" }
+        }
+      }
+    }
+  }
+}
