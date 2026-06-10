@@ -1,0 +1,39 @@
+.page {
+  padding: 2rem 0 3rem;
+}
+
+.card {
+  width: min(520px, 100%);
+  padding: 1.5rem;
+  border: 1px solid #99f6e4;
+  border-radius: 1.25rem;
+  background-color: rgba(255, 255, 255, 0.95);
+}
+
+.label {
+  margin: 0 0 0.5rem;
+  color: #0f766e;
+  font-size: 0.85rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+
+.title {
+  margin: 0 0 1rem;
+}
+
+.copy {
+  margin: 0 0 1rem;
+  color: #4b5563;
+}
+
+.button {
+  padding: 0.85rem 1rem;
+  border: 0;
+  border-radius: 999px;
+  background-color: #0f766e;
+  color: #ffffff;
+  font-weight: 700;
+  cursor: pointer;
+}

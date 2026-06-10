@@ -1,0 +1,28 @@
+.page {
+  padding: 2rem 0 3rem;
+}
+
+.label {
+  margin: 0 0 0.5rem;
+  color: #c2410c;
+  font-size: 0.85rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+
+.title {
+  margin: 0 0 1rem;
+  font-size: clamp(2rem, 4vw, 3rem);
+}
+
+.description {
+  width: min(720px, 100%);
+  margin: 0 0 1rem;
+  color: #57534e;
+}
+
+.meta {
+  margin: 0.25rem 0;
+  font-weight: 600;
+}

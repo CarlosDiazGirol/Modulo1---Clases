@@ -1,0 +1,29 @@
+import prisma from '../lib/prisma.js';
+
+export async function getWishlistByUser(userId) {
+  return prisma.wishlistItem.findMany({
+    where: { userId },
+    orderBy: { productId: 'asc' },
+  });
+}
+
+export async function toggleWishlistItem(userId, productId) {
+  // TODO en clase: devolver un estado claro de añadido o eliminado.
+  const existingItem = await prisma.wishlistItem.findFirst({
+    where: { userId, productId },
+  });
+
+  if (existingItem) {
+    await prisma.wishlistItem.delete({
+      where: { id: existingItem.id },
+    });
+
+    return { removed: true };
+  }
+
+  await prisma.wishlistItem.create({
+    data: { userId, productId },
+  });
+
+  return { removed: false };
+}

@@ -1,0 +1,38 @@
+.card {
+  padding: 1.25rem;
+  border: 1px solid #fdba74;
+  border-radius: 1.25rem;
+  background-color: rgba(255, 255, 255, 0.94);
+}
+
+.category {
+  margin: 0 0 0.5rem;
+  color: #c2410c;
+  font-size: 0.8rem;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.title {
+  margin: 0 0 0.65rem;
+}
+
+.description {
+  margin: 0 0 1rem;
+  color: #4b5563;
+}
+
+.price {
+  margin: 0 0 1rem;
+  font-weight: 700;
+}
+
+.button {
+  padding: 0.7rem 0.95rem;
+  border: 0;
+  border-radius: 999px;
+  background-color: #c2410c;
+  color: #ffffff;
+  font-weight: 700;
+  cursor: pointer;
+}
